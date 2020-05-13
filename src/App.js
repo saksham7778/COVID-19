@@ -1,16 +1,24 @@
 import React from 'react';
 // import logo from './logo.svg';
-import './App.css';
+import styles from './App.module.css';
 
 import Cards from './components/Cards/Cards'
 import Chart from './components/Chart/Chart'
 import Countrypicker from './components/CountryPicker/CountryPicker'
+import {fetchData} from './api'
 
 class App extends React.Component {
+
+  async componentDidMount() {
+    const data = await fetchData();
+    console.log(data);
+  }
+
+
   render(){
     return (
-      <div>
-        <h1>App</h1>
+      <div className={styles.container}>
+      
         <Cards />
         <Chart />
         <Countrypicker />
