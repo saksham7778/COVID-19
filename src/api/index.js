@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const url = 'https://covid19.mathdro.id/api';
 
-
+// to get info on cards
 export const fetchData = async () => {
 
     try {
@@ -10,11 +10,6 @@ export const fetchData = async () => {
         const { data:{confirmed,recovered,deaths,lastUpdate}} = await axios.get(url);
         
         const useful_data = {
-            // when names are same then we can directly give the values but for simplicity i have done by providing values
-            // confirmed,
-            // recovered,
-            // deaths,
-            // lastUpdate,
             recovered:recovered,
             confirmed:confirmed,
             deaths:deaths,
@@ -25,3 +20,22 @@ export const fetchData = async () => {
         
     }
 }
+
+// for displaying charts
+export const fetchDailyData = async () => {
+    try {
+      const { data } = await axios.get(`${url}/daily`);
+        
+      const modified_data= data.map((dailyData) => ({
+          confirmed:  dailyData.confirmed.total,
+          deaths:  dailyData.confirmed.total,
+          date:  dailyData.reportDate,
+      }));
+
+    //   console.log(modified_data);
+      return modified_data;
+
+    } catch (error) {
+      return error;
+    }
+  };

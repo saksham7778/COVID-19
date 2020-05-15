@@ -1,6 +1,7 @@
-npm install --save axios react-chartjs-2 react-countup classnames @material-ui/core
+npm install --save axios chart.js react-chartjs-2 react-countup classnames @material-ui/core
 
 axios -> for api calls
 @material-ui/core -> fir css
 react-countup -> to make number appear from 0 to the value
 classnames -> for multiple modules in css
+chart.js react-chartjs-2 -> to make charts

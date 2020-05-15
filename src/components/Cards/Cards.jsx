@@ -16,6 +16,7 @@ const Cards = ({api_response:{confirmed,deaths,lastUpdate,recovered}})=>{
   return(
     <div className={styles.container}>
       <Grid container spacing={3} justify="center">
+        
         <Grid item xs={12} md={3} component={Card} className={cx(styles.card, styles.infected)}>
           <CardContent>
               <Typography color="textSecondary" gutterBottom>
@@ -66,6 +67,7 @@ const Cards = ({api_response:{confirmed,deaths,lastUpdate,recovered}})=>{
               </Typography>
             </CardContent>
         </Grid>
+      
       </Grid>
     </div>
   );
