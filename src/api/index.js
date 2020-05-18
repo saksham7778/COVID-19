@@ -25,7 +25,9 @@ export const fetchData = async () => {
 export const fetchDailyData = async () => {
     try {
       const { data } = await axios.get(`${url}/daily`);
-        
+      // console.log({data});
+
+      // here in the map actually the value to datais given to dailydata from where it is going to confirmed , deaths, date
       const modified_data= data.map((dailyData) => ({
           confirmed:  dailyData.confirmed.total,
           deaths:  dailyData.confirmed.total,

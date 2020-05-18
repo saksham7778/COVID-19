@@ -14,14 +14,14 @@ const Chart = ()=>{
       setDailyData(initialDailyData);
     };
     fetchMyAPI();
-  })  ;
+  });
 
   const lineChart = (
 
     dailyData.length ? (
       <Line
         data={{
-          labels: dailyData.map( (data ) => data.date),
+          labels: dailyData.map( (data) => data.date),
           datasets: [{
             data: dailyData.map((data) => data.confirmed),
             label: 'Infected',
