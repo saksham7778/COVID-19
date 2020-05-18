@@ -16,7 +16,7 @@ const CountryPicker = ({handleCountryChange})=>{
     fetchAPI();
   }, [setCountries]);// to pevent from getting infine list
 
-  console.log(countries);
+  // console.log(countries);
   return(
     <FormControl className={styles.formControl}>
       <NativeSelect defaultValue="" onChange={(e) => handleCountryChange(e.target.value)}>

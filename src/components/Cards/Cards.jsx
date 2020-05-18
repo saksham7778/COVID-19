@@ -6,7 +6,7 @@ import cx from 'classnames';
 import styles from './Cards.module.css';
 
 const Cards = ({api_response:{confirmed,deaths,lastUpdate,recovered}})=>{
-  console.log({confirmed,deaths,lastUpdate,recovered});
+  // console.log({confirmed,deaths,lastUpdate,recovered});
   
   if (!confirmed) {
     return 'Loading...';
