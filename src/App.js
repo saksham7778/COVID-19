@@ -6,7 +6,7 @@ import Cards from './components/Cards/Cards'
 import Chart from './components/Chart/Chart'
 import Countrypicker from './components/CountryPicker/CountryPicker'
 import {fetchData} from './api'
-import image from './images/covid-19.png';
+import image from './images/image.png';
 
 class App extends React.Component {
 
